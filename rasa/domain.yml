@@ -1,0 +1,93 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - help_request
+  - thank_you
+  - ask_name
+  - ask_bot_function
+
+responses:
+  utter_greet:
+  - text: "Ciao! Come posso aiutarti oggi?"
+  
+  utter_default:
+  - text: "Mi dispiace, non ho capito. Puoi ripetere?"
+
+  utter_goodbye:
+  - text: "Arrivederci! Alla prossima!"
+
+  utter_affirm:
+  - text: "Ottimo!"
+
+  utter_deny:
+  - text: "Capito, nessun problema."
+
+  utter_cheer_up:
+  - text: "Ecco qualcosa per tirarti su:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Questo ti ha aiutato?"
+
+  utter_happy:
+  - text: "Fantastico, continua così!"
+
+  utter_iamabot:
+  - text: "Sono un bot, creato con Rasa."
+
+  utter_help:
+  - text: "Certo! Posso aiutarti con informazioni, rispondere a domande o semplicemente fare due chiacchiere."
+
+  utter_thank_you:
+  - text: "Prego! Fammi sapere se posso aiutarti ancora."
+
+  utter_ask_name:
+  - text: "Mi chiamo Assistente Rasa, e tu?"
+
+  utter_bot_function:
+  - text: "Sono qui per aiutarti con qualsiasi domanda o compito."
+
+slots:
+  mood:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+
+  user_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+
+  user_request:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_text
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+actions:
+  - action_greet_user
+  - utter_greet
+  - utter_goodbye
+  - utter_affirm
+  - utter_deny
+  - utter_cheer_up
+  - utter_did_that_help
+  - utter_happy
+  - utter_iamabot
+  - utter_help
+  - utter_thank_you
+  - utter_ask_name
+  - utter_bot_function

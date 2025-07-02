@@ -1,0 +1,97 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - ciao
+    - salve
+    - buongiorno
+    - hey
+    - come va?
+    - ehi, come stai?
+    - buon pomeriggio
+
+- intent: goodbye
+  examples: |
+    - arrivederci
+    - ci vediamo
+    - addio
+    - buona giornata
+    - buona serata
+    - a presto
+    - ci sentiamo dopo
+
+- intent: affirm
+  examples: |
+    - sì
+    - certo
+    - esatto
+    - confermo
+    - va bene
+    - assolutamente sì
+
+- intent: deny
+  examples: |
+    - no
+    - assolutamente no
+    - non credo
+    - non voglio
+    - non mi piace
+    - non va bene
+
+- intent: mood_great
+  examples: |
+    - sto bene
+    - alla grande
+    - fantastico
+    - perfetto
+    - sto benissimo
+    - sono felice
+
+- intent: mood_unhappy
+  examples: |
+    - sono triste
+    - non mi sento bene
+    - è una giornata pessima
+    - sono giù di morale
+    - non va bene oggi
+    - sono arrabbiato
+
+- intent: bot_challenge
+  examples: |
+    - sei un bot?
+    - sei una persona vera?
+    - sei reale?
+    - sei umano?
+    - sto parlando con un robot?
+
+- intent: help_request
+  examples: |
+    - mi puoi aiutare?
+    - ho bisogno di aiuto
+    - aiutami per favore
+    - cosa puoi fare?
+    - puoi darmi una mano?
+
+- intent: thank_you
+  examples: |
+    - grazie
+    - ti ringrazio
+    - grazie mille
+    - apprezzo molto
+    - sei gentilissimo
+
+- intent: ask_name
+  examples: |
+    - come ti chiami?
+    - qual è il tuo nome?
+    - chi sei?
+    - posso sapere il tuo nome?
+
+- intent: ask_bot_function
+  examples: |
+    - cosa sai fare?
+    - a cosa servi?
+    - qual è il tuo scopo?
+    - che tipo di bot sei?
+    - come puoi aiutarmi?

@@ -1,0 +1,12 @@
+version: '3.9'
+services:
+  rasa:
+    build: .
+    image: rasa-chatbot
+    container_name: rasa-chatbot
+    ports:
+      - "5005:5005"
+    volumes:
+      - ./models:/app/models
+      - ./config:/app/config
+      - ./data:/app/data

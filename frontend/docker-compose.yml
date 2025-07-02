@@ -1,0 +1,18 @@
+version: '3.9'
+
+services:
+  rasa:
+    image: rasa/rasa:3.5.10
+    command: run --enable-api --cors "*"
+    ports:
+      - "5005:5005"
+    volumes:
+      - ./rasa:/app
+
+  frontend:
+    build:
+      context: .
+    ports:
+      - "3000:80"
+    depends_on:
+      - rasa

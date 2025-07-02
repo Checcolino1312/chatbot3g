@@ -1,0 +1,22 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Rasa models
+models/
+results/
+logs/
+
+# Mac/Linux/Windows cache
+.DS_Store
+Thumbs.db
+
+# Virtual environments
+venv/
+.env/
+*.env
+
+# Training backups (es. nlu.yml.bak)
+*.bak
