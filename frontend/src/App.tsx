@@ -2,8 +2,7 @@ import Chat from './components/Chat';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-100 p-4">
-      <h1 className="text-2xl font-bold mb-4 text-center">Chatbot Rasa</h1>
+    <div className="h-screen w-screen overflow-hidden bg-white">
       <Chat />
     </div>
   );
